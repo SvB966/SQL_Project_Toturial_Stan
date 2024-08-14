@@ -54,3 +54,4 @@ Door vraag en salarisgegevens te combineren, hebben we de vaardigheden geïdenti
 ---
 ![Beschrijving van de grafiek]("C:\Users\SGvan\OneDrive\Documents\Bureaublad\SQL_Project_Toturial_Stan\Images\Results 2.png")
 
+
