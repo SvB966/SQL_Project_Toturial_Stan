@@ -1,56 +1,73 @@
-Hier is een voorstel voor een README.md-bestand voor je project, gebaseerd op de structuur en inhoud van vergelijkbare projecten zoals het SQL Project Data Job Analysis-project van Luke Barousse:
-
----
 
 # Business Analyst Job Market Analysis
 
-## Overzicht
+## Overview
 
-Dit project is ontworpen om diepgaande inzichten te bieden in de arbeidsmarkt voor Business Analysts. We analyseren goedbetaalde functies, de meest gevraagde vaardigheden, en de vaardigheden die zowel in hoge vraag staan als goed worden beloond. Door SQL-query's te gebruiken, kunnen we de belangrijkste trends en patronen in de arbeidsmarkt blootleggen.
+This project delivers detailed insights into the Business Analyst job market, highlighting top-paying positions, in-demand skills, and the most lucrative skills. We utilize SQL to identify key market trends.
 
-## Achtergrond
+## Objective
 
-Het doel van dit project is om professionals te helpen navigeren in de arbeidsmarkt voor Business Analysts door te identificeren welke vaardigheden hen de beste kansen bieden op goedbetaalde posities. De gegevens die in dit project zijn gebruikt, omvatten vacaturespecifieke informatie zoals functiebenamingen, salarissen, locaties en vereiste vaardigheden.
+The goal is to guide professionals in identifying skills that lead to higher-paying Business Analyst roles. The analysis covers job titles, salaries, locations, and required skills.
 
-### Vragen die we hebben beantwoord:
+## Research Questions
 
-1. Wat zijn de bestbetaalde functies voor Business Analysts?
-2. Welke vaardigheden zijn vereist voor deze bestbetaalde functies?
-3. Wat zijn de meest gevraagde vaardigheden voor Business Analysts?
-4. Welke vaardigheden zijn geassocieerd met hogere salarissen?
-5. Wat zijn de meest optimale vaardigheden om te leren?
+1. What are the highest-paying Business Analyst positions?
+2. Which skills are essential for these top-paying roles?
+3. What are the most in-demand skills for Business Analysts?
+4. Which skills are linked to higher salaries?
+5. What are the most valuable skills to learn?
 
-## Gebruikte Tools
+## Tools Used
 
-In dit project hebben we de volgende tools gebruikt om de gegevens te analyseren:
+- **SQL**: For extracting key insights from the database.
+- **PostgreSQL**: Database management for processing job posting data.
+- **Visual Studio Code**: For database management and SQL execution.
+- **Git & GitHub**: For version control and collaboration on SQL scripts and analyses.
 
-- **SQL**: Voor het opstellen en uitvoeren van query's om cruciale inzichten uit de database te halen.
-- **PostgreSQL**: Het gekozen databasebeheersysteem voor het verwerken van de vacaturegegevens.
-- **Visual Studio Code**: Gebruikt voor databasebeheer en het uitvoeren van SQL-query's.
-- **Git & GitHub**: Voor versiebeheer en samenwerking, evenals het delen van SQL-scripts en analyses.
+## Analysis and Results
 
-## Analyse en Resultaten
+### 1. Top-Paid Business Analyst Positions
 
-### 1. Topbetaalde Business Analyst Functies
+We identified the top 10 highest-paid positions, focusing on average salaries and remote roles, revealing the most lucrative opportunities.
 
-We identificeerden de top 10 best betaalde Business Analyst functies door te filteren op gemiddeld jaarsalaris en locatie, met een speciale focus op remote functies. Deze analyse hielp bij het identificeren van de meest lucratieve kansen binnen het veld.
+**Key Insights:**
 
-### 2. Vaardigheden voor Topbetaalde Functies
+1. **Top Locations for Business Analyst Positions:**
+   - Santa Clara, Visalia, and Newport Beach, CA are consistently among the highest-paying locations for Business Analyst roles, making California a prime region for these positions.
 
-Door functies te koppelen aan de vereiste vaardigheden, hebben we inzicht verkregen in welke vaardigheden werkgevers waarderen voor goedbetaalde rollen. 
+2. **Average Salary Levels:**
+   - Business Analysts in top-paying areas earn between $95,000 and $107,590 annually, with some exceeding $100,000, highlighting significant compensation, particularly based on location and employment type.
 
-### 3. Meest Gevraagde Vaardigheden
+3. **Employment Type:**
+   - Full-time positions generally offer higher pay than contractual roles, though there are exceptions, such as a contractor position in New York.
 
-Deze analyse identificeerde de vaardigheden die het vaakst worden gevraagd in vacatures, waardoor we kunnen focussen op de meest waardevolle vaardigheden op de arbeidsmarkt.
 
-### 4. Vaardigheden Gebaseerd op Salaris
+### 2. Skills for Top-Paid Positions
 
-We onderzochten de gemiddelde salarissen die geassocieerd zijn met verschillende vaardigheden, wat hielp bij het identificeren van welke vaardigheden het meest lonend zijn.
+By matching job roles with required skills, we determined which skills are most valued by employers for high-paying roles.
 
-### 5. Meest Optimale Vaardigheden
+![Results 2](https://github.com/user-attachments/assets/6d08982e-4046-44a3-8c10-791c70e96d62)
 
-Door vraag en salarisgegevens te combineren, hebben we de vaardigheden geïdentificeerd die zowel in hoge vraag staan als goed worden beloond, wat een strategische focus biedt voor vaardighedenontwikkeling.
+
+### 3. Most In-Demand Skills
+
+This analysis pinpointed the skills most frequently requested in job postings, identifying the most crucial skills in the market.
+![Results 3](https://github.com/user-attachments/assets/a51a40de-45a7-4f51-9bb4-e6ac6d6e6336)
+
+
+### 4. Skills Linked to Salary
+
+We assessed average salaries by skill, highlighting the most financially rewarding skills.
+![Results 4](https://github.com/user-attachments/assets/f7bc256a-d111-4e3b-9d62-5db55905410a)
+
+
+
+### 5. Optimal Skills to Learn
+
+By merging demand and salary data, we identified skills that are both highly sought after and well-compensated, offering strategic guidance for skill development.
+
+![Results 5](https://github.com/user-attachments/assets/6b133c77-2aea-4728-bfab-12b20151323e)
+
 
 ---
-![Beschrijving van de grafiek]("C:\Users\SGvan\OneDrive\Documents\Bureaublad\SQL_Project_Toturial_Stan\Images\Results 2.png")
 
