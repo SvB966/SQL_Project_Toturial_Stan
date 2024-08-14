@@ -52,7 +52,5 @@ We onderzochten de gemiddelde salarissen die geassocieerd zijn met verschillende
 Door vraag en salarisgegevens te combineren, hebben we de vaardigheden geïdentificeerd die zowel in hoge vraag staan als goed worden beloond, wat een strategische focus biedt voor vaardighedenontwikkeling.
 
 ---
+![Beschrijving van de grafiek]("C:\Users\SGvan\OneDrive\Documents\Bureaublad\SQL_Project_Toturial_Stan\Images\Results 2.png")
 
-Dit README.md-bestand biedt een helder en gestructureerd overzicht van je project, inclusief de belangrijkste vragen die je hebt beantwoord en de tools die je hebt gebruikt. Het zal potentiële gebruikers of collega's helpen om snel te begrijpen wat het project inhoudt en hoe ze het kunnen gebruiken of eraan kunnen bijdragen.
-
-Als je verdere aanpassingen of aanvullingen nodig hebt, laat het me weten!
