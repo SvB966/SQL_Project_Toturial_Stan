@@ -30,7 +30,6 @@ The goal is to guide professionals in identifying skills that lead to higher-pay
 
 We identified the top 10 highest-paid positions, focusing on average salaries and remote roles, revealing the most lucrative opportunities.
 
-## Example SQL Query
 
 ```sql
 SELECT 
@@ -49,6 +48,7 @@ ORDER BY
     salary_year_avg DESC
 LIMIT 10;
 ```
+
 **Key Insights:**
 
 1. **Top Locations for Business Analyst Positions:**
@@ -63,6 +63,38 @@ LIMIT 10;
 ### 2. Skills for Top-Paid Positions
 
 By matching job roles with required skills, we determined which skills are most valued by employers for high-paying roles.
+```sql
+WITH top_paying_jobs AS (
+    SELECT
+        job_id,
+        job_title,
+        salary_year_avg
+    FROM
+        job_postings_fact
+    WHERE
+        job_title = 'Business Analyst'
+        AND salary_year_avg IS NOT NULL
+        AND job_location = 'Anywhere'
+    ORDER BY
+        salary_year_avg DESC
+    LIMIT 10
+)
+SELECT
+    top_paying_jobs.job_id,
+    top_paying_jobs.job_title,
+    top_paying_jobs.salary_year_avg,
+    skills_dim.skills
+FROM
+    top_paying_jobs
+INNER JOIN
+    skills_job_dim ON top_paying_jobs.job_id = skills_job_dim.job_id
+INNER JOIN
+    skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
+ORDER BY
+    top_paying_jobs.salary_year_avg DESC;
+
+```
+
 
 ![Results 2](https://github.com/user-attachments/assets/6d08982e-4046-44a3-8c10-791c70e96d62)
 
@@ -82,6 +114,53 @@ By matching job roles with required skills, we determined which skills are most 
 ### 3. Most In-Demand Skills
 
 This analysis pinpointed the skills most frequently requested in job postings, identifying the most crucial skills in the market.
+
+```sql
+WITH skills_demand AS (
+    SELECT
+        skills_dim.skills AS skill,
+        COUNT(skills_job_dim.job_id) AS demand_count
+    FROM
+        job_postings_fact
+    INNER JOIN
+        skills_job_dim ON job_postings_fact.job_id = skills_job_dim.job_id
+    INNER JOIN
+        skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
+    WHERE
+        job_postings_fact.job_title = 'Business Analyst'
+    GROUP BY
+        skills_dim.skills
+),
+average_salary AS (
+    SELECT
+        skills_dim.skills AS skill,
+        ROUND(AVG(job_postings_fact.salary_year_avg), 2) AS avg_salary
+    FROM
+        job_postings_fact
+    INNER JOIN
+        skills_job_dim ON job_postings_fact.job_id = skills_job_dim.job_id
+    INNER JOIN
+        skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
+    WHERE
+        job_postings_fact.job_title = 'Business Analyst'
+        AND job_postings_fact.salary_year_avg IS NOT NULL
+    GROUP BY
+        skills_dim.skills
+)
+SELECT
+    skills_demand.skill,
+    skills_demand.demand_count,
+    average_salary.avg_salary
+FROM
+    skills_demand
+INNER JOIN
+    average_salary ON skills_demand.skill = average_salary.skill
+ORDER BY
+    demand_count DESC, avg_salary DESC
+LIMIT 10;
+
+```
+
 ![Results 3](https://github.com/user-attachments/assets/a51a40de-45a7-4f51-9bb4-e6ac6d6e6336)
 
 1. **Excel (1,031 mentions):** The most sought-after skill, Excel is essential for data analysis, reporting, budgeting, and financial modeling.
@@ -95,6 +174,27 @@ This analysis pinpointed the skills most frequently requested in job postings, i
 ### 4. Skills Linked to Salary
 
 We assessed average salaries by skill, highlighting the most financially rewarding skills.
+
+```sql
+SELECT
+    skills_dim.skills AS skill,
+    ROUND(AVG(job_postings_fact.salary_year_avg), 2) AS avg_salary
+FROM
+    job_postings_fact
+INNER JOIN
+    skills_job_dim ON job_postings_fact.job_id = skills_job_dim.job_id
+INNER JOIN
+    skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
+WHERE
+    job_postings_fact.job_title = 'Business Analyst'
+    AND job_postings_fact.salary_year_avg IS NOT NULL
+GROUP BY
+    skills_dim.skills
+ORDER BY
+    avg_salary DESC;
+
+```
+
 ![Results 4](https://github.com/user-attachments/assets/f7bc256a-d111-4e3b-9d62-5db55905410a)
 
 1. **Top Earning Skills for Business Analysts:**
@@ -111,7 +211,58 @@ We assessed average salaries by skill, highlighting the most financially rewardi
 
 By merging demand and salary data, we identified skills that are both highly sought after and well-compensated, offering strategic guidance for skill development.
 
+```sql
+WITH skills_demand AS (
+    SELECT
+        skills_dim.skills AS skill,
+        COUNT(skills_job_dim.job_id) AS demand_count
+    FROM
+        job_postings_fact
+    INNER JOIN
+        skills_job_dim ON job_postings_fact.job_id = skills_job_dim.job_id
+    INNER JOIN
+        skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
+    WHERE
+        job_postings_fact.job_title = 'Business Analyst'
+    GROUP BY
+        skills_dim.skills
+),
+average_salary AS (
+    SELECT
+        skills_dim.skills AS skill,
+        ROUND(AVG(job_postings_fact.salary_year_avg), 2) AS avg_salary
+    FROM
+        job_postings_fact
+    INNER JOIN
+        skills_job_dim ON job_postings_fact.job_id = skills_job_dim.job_id
+    INNER JOIN
+        skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
+    WHERE
+        job_postings_fact.job_title = 'Business Analyst'
+        AND job_postings_fact.salary_year_avg IS NOT NULL
+    GROUP BY
+        skills_dim.skills
+)
+SELECT
+    skills_demand.skill,
+    skills_demand.demand_count,
+    average_salary.avg_salary
+FROM
+    skills_demand
+INNER JOIN
+    average_salary ON skills_demand.skill = average_salary.skill
+ORDER BY
+    demand_count DESC, avg_salary DESC
+LIMIT 10;
+
+```
+
 ![Results 5](https://github.com/user-attachments/assets/6b133c77-2aea-4728-bfab-12b20151323e)
+
+1. **In-Demand Skills and Corresponding Salaries:**
+   - **Excel and SQL:** These foundational tools lead in demand, with 1,031 and 977 mentions, respectively. However, their average salaries are slightly lower, at $73,766 and $75,557.
+   - **Tableau and Power BI:** These data visualization tools not only have high demand but also command higher salaries, averaging $83,938 for Tableau and $86,769 for Power BI. This indicates the significant market value of expertise in data visualization.
+   - **Python:** Mentioned 331 times, Python is a versatile programming language with a competitive average salary of $76,363, highlighting its growing importance in data analysis and automation.
 
 
 ---
