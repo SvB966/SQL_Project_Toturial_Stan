@@ -40,3 +40,59 @@ INNER JOIN
 ORDER BY
     demand_count DESC, avg_salary DESC
 LIMIT 10;
+
+
+/* QUERY RESULTS:
+[
+  {
+    "skill": "excel",
+    "demand_count": "1031",
+    "avg_salary": "73765.61"
+  },
+  {
+    "skill": "sql",
+    "demand_count": "977",
+    "avg_salary": "75556.60"
+  },
+  {
+    "skill": "tableau",
+    "demand_count": "497",
+    "avg_salary": "83938.10"
+  },
+  {
+    "skill": "power bi",
+    "demand_count": "465",
+    "avg_salary": "86768.71"
+  },
+  {
+    "skill": "python",
+    "demand_count": "331",
+    "avg_salary": "76363.33"
+  },
+  {
+    "skill": "powerpoint",
+    "demand_count": "302",
+    "avg_salary": "69416.67"
+  },
+  {
+    "skill": "word",
+    "demand_count": "236",
+    "avg_salary": "63000.00"
+  },
+  {
+    "skill": "r",
+    "demand_count": "206",
+    "avg_salary": "80550.00"
+  },
+  {
+    "skill": "jira",
+    "demand_count": "195",
+    "avg_salary": "54000.00"
+  },
+  {
+    "skill": "flow",
+    "demand_count": "170",
+    "avg_salary": "83979.45"
+  }
+]
+/*

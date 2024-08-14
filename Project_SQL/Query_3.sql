@@ -14,3 +14,28 @@ GROUP BY
 ORDER BY
     demand_count DESC
 LIMIT 5;
+
+/* QUERY RESULTS:
+[
+  {
+    "skill": "excel",
+    "demand_count": "1031"
+  },
+  {
+    "skill": "sql",
+    "demand_count": "977"
+  },
+  {
+    "skill": "tableau",
+    "demand_count": "497"
+  },
+  {
+    "skill": "power bi",
+    "demand_count": "465"
+  },
+  {
+    "skill": "python",
+    "demand_count": "331"
+  }
+
+/*

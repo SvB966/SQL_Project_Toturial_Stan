@@ -26,3 +26,61 @@ INNER JOIN
     skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 ORDER BY
     top_paying_jobs.salary_year_avg DESC;
+
+/* QUERY RESULTS:
+[
+  {
+    "job_id": 1604546,
+    "job_title": "Business Analyst",
+    "salary_year_avg": "85000.0",
+    "skills": "sharepoint"
+  },
+  {
+    "job_id": 1604546,
+    "job_title": "Business Analyst",
+    "salary_year_avg": "85000.0",
+    "skills": "powerpoint"
+  },
+  {
+    "job_id": 1604546,
+    "job_title": "Business Analyst",
+    "salary_year_avg": "85000.0",
+    "skills": "visio"
+  },
+  {
+    "job_id": 1604546,
+    "job_title": "Business Analyst",
+    "salary_year_avg": "85000.0",
+    "skills": "flow"
+  },
+  {
+    "job_id": 1604546,
+    "job_title": "Business Analyst",
+    "salary_year_avg": "85000.0",
+    "skills": "confluence"
+  },
+  {
+    "job_id": 1348933,
+    "job_title": "Business Analyst",
+    "salary_year_avg": "62500.0",
+    "skills": "sql"
+  },
+  {
+    "job_id": 1348933,
+    "job_title": "Business Analyst",
+    "salary_year_avg": "62500.0",
+    "skills": "excel"
+  },
+  {
+    "job_id": 1348933,
+    "job_title": "Business Analyst",
+    "salary_year_avg": "62500.0",
+    "skills": "sheets"
+  },
+  {
+    "job_id": 1348933,
+    "job_title": "Business Analyst",
+    "salary_year_avg": "62500.0",
+    "skills": "smartsheet"
+  }
+]/*
