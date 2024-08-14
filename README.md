@@ -52,6 +52,5 @@ We onderzochten de gemiddelde salarissen die geassocieerd zijn met verschillende
 Door vraag en salarisgegevens te combineren, hebben we de vaardigheden geïdentificeerd die zowel in hoge vraag staan als goed worden beloond, wat een strategische focus biedt voor vaardighedenontwikkeling.
 
 ---
-![Beschrijving van de grafiek](Images/Results 2.png)
-
+![Results 2](https://github.com/user-attachments/assets/0c909948-6bbd-46f6-b6a2-c731be3ea7b8)
 
