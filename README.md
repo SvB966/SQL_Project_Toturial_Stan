@@ -29,7 +29,11 @@ The goal is to guide professionals in identifying skills that lead to higher-pay
 ### 1. Top-Paid Business Analyst Positions
 
 We identified the top 10 highest-paid positions, focusing on average salaries and remote roles, revealing the most lucrative opportunities.
-[Uploading QuSELECT 
+
+## Example SQL Query
+
+```sql
+SELECT 
     job_id, 
     job_title, 
     job_location, 
@@ -44,91 +48,7 @@ WHERE
 ORDER BY 
     salary_year_avg DESC
 LIMIT 10;
-
-/* QUERY RESULTS:
-[
-  {
-    "job_id": 1399498,
-    "job_title": "Business Analyst",
-    "job_location": "Santa Clara, CA",
-    "job_schedule_type": "Full-time",
-    "salary_year_avg": "107590.9375",
-    "job_posted_date": "2023-12-05 18:00:42"
-  },
-  {
-    "job_id": 175409,
-    "job_title": "Business Analyst",
-    "job_location": "Visalia, CA",
-    "job_schedule_type": "Full-time",
-    "salary_year_avg": "100000.0",
-    "job_posted_date": "2023-06-07 18:00:49"
-  },
-  {
-    "job_id": 1203821,
-    "job_title": "Business Analyst",
-    "job_location": "Newport Beach, CA",
-    "job_schedule_type": "Full-time",
-    "salary_year_avg": "97500.0",
-    "job_posted_date": "2023-10-06 17:00:50"
-  },
-  {
-    "job_id": 897636,
-    "job_title": "Business Analyst",
-    "job_location": "New York, NY",
-    "job_schedule_type": "Contractor",
-    "salary_year_avg": "97281.0",
-    "job_posted_date": "2023-08-20 17:00:02"
-  },
-  {
-    "job_id": 602485,
-    "job_title": "Business Analyst",
-    "job_location": "New York",
-    "job_schedule_type": "Full-time",
-    "salary_year_avg": "95000.0",
-    "job_posted_date": "2023-09-27 21:00:20"
-  },
-  {
-    "job_id": 203007,
-    "job_title": "Business Analyst",
-    "job_location": "Atlanta, GA",
-    "job_schedule_type": "Full-time",
-    "salary_year_avg": "95000.0",
-    "job_posted_date": "2023-11-28 15:41:22"
-  },
-  {
-    "job_id": 1224185,
-    "job_title": "Business Analyst",
-    "job_location": "St. Louis, MO",
-    "job_schedule_type": "Full-time",
-    "salary_year_avg": "92036.234375",
-    "job_posted_date": "2023-10-26 15:01:47"
-  },
-  {
-    "job_id": 184896,
-    "job_title": "Business Analyst",
-    "job_location": "Doral, FL",
-    "job_schedule_type": "Full-time",
-    "salary_year_avg": "91100.0",
-    "job_posted_date": "2023-11-20 21:01:50"
-  },
-  {
-    "job_id": 1094647,
-    "job_title": "Business Analyst",
-    "job_location": "Torrington, CT",
-    "job_schedule_type": "Full-time",
-    "salary_year_avg": "90000.0",
-    "job_posted_date": "2023-08-04 14:00:39"
-  },
-  {
-    "job_id": 488025,
-    "job_title": "Business Analyst",
-    "job_location": "Oakland, CA",
-    "job_schedule_type": "Full-time",
-    "salary_year_avg": "90000.0",
-    "job_posted_date": "2023-02-23 09:01:18"
-  }
-]/*ery_1.sql…]()
-
+```
 **Key Insights:**
 
 1. **Top Locations for Business Analyst Positions:**
@@ -139,7 +59,6 @@ LIMIT 10;
 
 3. **Employment Type:**
    - Full-time positions generally offer higher pay than contractual roles, though there are exceptions, such as a contractor position in New York.
-
 
 ### 2. Skills for Top-Paid Positions
 
@@ -178,6 +97,14 @@ This analysis pinpointed the skills most frequently requested in job postings, i
 We assessed average salaries by skill, highlighting the most financially rewarding skills.
 ![Results 4](https://github.com/user-attachments/assets/f7bc256a-d111-4e3b-9d62-5db55905410a)
 
+1. **Top Earning Skills for Business Analysts:**
+   - **High-Paying Skills:** Shell, MySQL, Unix, Phoenix, and SQL Server are among the highest-paying skills for Business Analysts, with an average salary of $107,590.94. These technical skills, particularly in databases and operating systems, are highly valued.
+   - **Technical Proficiency:** Expertise in Shell scripting, Unix systems, and databases like MySQL and SQL Server significantly boosts earning potential. These skills are crucial for managing automated processes, handling large datasets, and optimizing data-driven decision-making.
+   - **Specialized Knowledge:** Mastery of niche technologies, such as Phoenix, also contributes to higher salaries, especially in organizations that rely on specific frameworks.
+
+### Data Visualization Summary:
+- **Top Skills:** The highest average salaries for Business Analysts are associated with proficiency in Shell, MySQL, Unix, Phoenix, and SQL Server.
+- **Strategic Focus:** Developing technical skills in databases and operating systems is a key strategy for professionals aiming to increase their earnings.
 
 
 ### 5. Optimal Skills to Learn
